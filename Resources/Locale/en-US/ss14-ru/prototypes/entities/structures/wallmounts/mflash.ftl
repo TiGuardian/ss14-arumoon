@@ -1,0 +1,9 @@
+ent-MountedFlash = mounted flash
+    .desc = A wall-mounted flashbulb device.
+    .suffix = { "" }
+ent-MountedFlashFrame = mounted flash frame
+    .desc = A mounted flash frame. Seems empty.
+    .suffix = { "" }
+ent-MountedFlashBroken = broken mounted flash
+    .suffix = { "" }
+    .desc = It doesn't seem to be a flashing problem anymore.

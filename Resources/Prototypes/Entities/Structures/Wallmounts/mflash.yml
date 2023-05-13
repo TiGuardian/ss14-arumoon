@@ -1,0 +1,141 @@
+- type: entity
+  id: MountedFlash
+  name: mounted flash
+  description: A wall-mounted flashbulb device.
+  components:
+  - type: FlashOnTrigger
+    range: 5
+    bang: true
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Weapons/flash.ogg
+  - type: TriggerOnSignal
+  - type: SignalReceiver
+  - type: WallMount
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: ExtensionCableReceiver
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Appearance
+  - type: Sprite
+    drawdepth: WallMountedItems
+    netsync: false
+    sprite: Structures/Wallmounts/mflash.rsi
+    layers:
+    - state: base
+    - state: powered
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+    - state: flashing
+      map: ["enum.FlashVisuals.LightLayer"]
+      shader: unshaded
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.FlashVisuals.LightLayer:
+        enum.FlashVisuals.Flashing:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Transform
+    noRot: false
+    anchored: true
+  - type: Wires
+    BoardName: "MountedFlash"
+    LayoutId: MountedFlash
+  - type: Construction
+    graph: MountedFlash
+    node: mountedFlash
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:ChangeConstructionNodeBehavior
+            node: mountedFlashBroken
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+
+#- type: entity
+#  parent: MountedFlash
+#  id: MountedFlashConstructed
+#  suffix: Open
+#  components:
+#  - type: WiresPanel
+#    open: true
+    
+- type: entity
+  id: MountedFlashFrame
+  name: mounted flash frame
+  description: A mounted flash frame. Seems empty.
+  components:
+  - type: WallMount
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/Wallmounts/mflash.rsi
+    state: frame
+  - type: Construction
+    graph: MountedFlash
+    node: frame
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+        
+- type: entity
+  parent: MountedFlashFrame
+  id: MountedFlashBroken
+  name: broken mounted flash
+  description: It doesn't seem to be a flashing problem anymore.
+  components:
+  - type: Construction
+    graph: MountedFlash
+    node: mountedFlashBroken
+  - type: Sprite
+    sprite: Structures/Wallmounts/mflash.rsi
+    drawdepth: WallMountedItems
+    state: broken
