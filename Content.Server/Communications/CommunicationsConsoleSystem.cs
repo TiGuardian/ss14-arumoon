@@ -16,6 +16,7 @@ using Content.Shared.Communications;
 using Content.Shared.Database;
 using Content.Shared.Emag.Components;
 using Content.Shared.Popups;
+using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 
 namespace Content.Server.Communications
