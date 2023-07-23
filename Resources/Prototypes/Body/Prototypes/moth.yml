@@ -8,8 +8,10 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganMothBrain
+        eyes: OrganMothEyes
+        ears: OrganMothEars
+        tongue: OrganMothTongue
     torso:
       part: TorsoMoth
       connections:
@@ -18,11 +20,10 @@
       - left leg
       - right leg
       organs:
-        heart: OrganAnimalHeart
-        lungs: OrganHumanLungs
-        stomach: OrganReptilianStomach
-        liver:  OrganAnimalLiver
-        kidneys: OrganHumanKidneys
+        heart: OrganMothHeart
+        lungs: OrganMothLungs
+        stomach: OrganMothStomach
+        kidneys: OrganMothKidneys
     right arm:
       part: RightArmMoth
       connections:

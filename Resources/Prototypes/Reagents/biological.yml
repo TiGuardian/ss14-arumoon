@@ -38,6 +38,29 @@
         factor: 1.5
 
 - type: reagent
+  id: Hemolymph
+  name: reagent-name-insect-blood
+  group: Biological
+  desc: reagent-desc-insect-blood
+  flavor: terrible
+  color: "#fff01f"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-viscous
+  slippery: false
+  viscosity: 0.15 # Sticky!
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 0.5
+      - !type:AdjustReagent
+        reagent: Nutriment
+        amount: 1.0
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: 0.5
+
+- type: reagent
   id: SpiderBlood
   name: reagent-name-spider-blood
   group: Biological

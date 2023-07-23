@@ -31,11 +31,10 @@
     size: 14
     compatibility: Biological
     mechanisms:
-    - OrganAnimalHeart
-    - OrganHumanLungs
-    - OrganHumanStomach
-    - OrganAnimalLiver
-    - OrganHumanKidneys
+    - OrganMothHeart
+    - OrganMothLungs
+    - OrganMothStomach
+    - OrganMothKidneys
 #    criticalThreshold: 100
 #    deadThreshold: 150
 
@@ -57,8 +56,10 @@
     compatibility: Biological
     vital: true
     mechanisms:
-    - OrganHumanBrain
-    - OrganHumanEyes
+    - OrganMothBrain
+    - OrganMothEyes
+    - OrganMothEars
+    - OrganMothTongue
 #    criticalThreshold: 50
 #    deadThreshold: 120
   - type: Input

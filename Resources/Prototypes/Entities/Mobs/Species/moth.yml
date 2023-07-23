@@ -41,6 +41,40 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Moth # moff
+  - type: DamageVisuals
+    thresholds: [ 15, 35, 85 ]
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#fff01f"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+        color: "#999999"
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 30
+    animation: WeaponArcClaw
+    attackRate: 1
+    damage:
+      types:
+        Slash: 5
+  - type: Bloodstream
+    maxBleedAmount: 7.5 #hemolymph is more viscous, therefore the limit is less
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          0.75
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -1.5
+    bloodReagent: Hemolymph
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.15 #per second, scales with pressure and other constants. Half as much as humans.
   - type: Temperature
     heatDamageThreshold: 330
     coldDamageThreshold: 195
@@ -58,6 +92,18 @@
     baseSprintSpeed: 5.5
     weightlessAcceleration: 1.6
     weightlessModifier: 0.4
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 90 # weights 2x less than humans and also weaker.
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
   - type: Sprite # sprite again because we want different layer ordering
     netsync: false
     noRot: true
@@ -129,7 +175,7 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: 1.5
+            Poison: 5
     - reagents: [ Diethylamine ]
       methods: [ Touch, Ingestion, Injection ]
       effects:

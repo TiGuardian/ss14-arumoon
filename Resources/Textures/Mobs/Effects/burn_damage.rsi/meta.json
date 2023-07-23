@@ -21,6 +21,25 @@
 		{"name": "LLeg_Burn_100", "directions": 4},
 		{"name": "RArm_Burn_100", "directions": 4},
 		{"name": "RLeg_Burn_100", "directions": 4},
-		{"name": "Chest_Burn_100", "directions": 4}
+		{"name": "Chest_Burn_100", "directions": 4},
+
+		{"name": "Head_Burn_15", "directions": 4},
+		{"name": "LArm_Burn_15", "directions": 4},
+		{"name": "LLeg_Burn_15", "directions": 4},
+		{"name": "RArm_Burn_15", "directions": 4},
+		{"name": "RLeg_Burn_15", "directions": 4},
+		{"name": "Chest_Burn_15", "directions": 4},
+		{"name": "Head_Burn_35", "directions": 4},
+		{"name": "LArm_Burn_35", "directions": 4},
+		{"name": "LLeg_Burn_35", "directions": 4},
+		{"name": "RArm_Burn_35", "directions": 4},
+		{"name": "RLeg_Burn_35", "directions": 4},
+		{"name": "Chest_Burn_35", "directions": 4},
+		{"name": "Head_Burn_85", "directions": 4},
+		{"name": "LArm_Burn_85", "directions": 4},
+		{"name": "LLeg_Burn_85", "directions": 4},
+		{"name": "RArm_Burn_85", "directions": 4},
+		{"name": "RLeg_Burn_85", "directions": 4},
+		{"name": "Chest_Burn_85", "directions": 4}
 	]
 }

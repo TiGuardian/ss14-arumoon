@@ -35,6 +35,10 @@
         ratios:
           CarbonDioxide: 1.0
           Oxygen: -1.0
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Moth
 
 - type: reagent
   id: Plasma
