@@ -39,9 +39,9 @@
 
 - type: reagent
   id: Hemolymph
-  name: reagent-name-insect-blood
+  name: reagent-name-hemolymph
   group: Biological
-  desc: reagent-desc-insect-blood
+  desc: reagent-desc-hemolymph
   flavor: terrible
   color: "#fff01f"
   recognizable: true
