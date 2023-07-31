@@ -15,6 +15,10 @@
         Slash: 17 #cmon, it has to be at least BETTER than the rest.
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    enabled: true
+    reflectProb: .5
+    spread: 90        
   - type: Item
     size: 15
     sprite: Objects/Weapons/Melee/captain_sabre.rsi
@@ -119,3 +123,43 @@
     size: 15
     sprite: Objects/Weapons/Melee/cutlass.rsi
   - type: DisarmMalus
+
+- type: entity
+  name: Cursed katana
+  parent: BaseItem
+  id: Katanacursed
+  description: Ancient craftwork made with not so ancient plasteel.
+  components:
+  - type: Sharp
+  - type: Unremoveable
+  - type: Tag
+    tags:
+    - Katana
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/katana_cursed.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 35
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 15
+    sprite: Objects/Weapons/Melee/katana_cursed.rsi
+  - type: DisarmMalus
+
+- type: entity
+  parent: BaseItem
+  id: KatanacursedShard
+  name: Strange shard
+  description: A small box containing a hypopen. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/katana_cursed.rsi
+    state: katana-shard
+  - type: SpawnItemsOnUse
+    items:
+    - id: Katanacursed
+    sound:
+      path: /Audio/Effects/bite.ogg

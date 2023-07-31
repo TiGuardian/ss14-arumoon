@@ -9,7 +9,7 @@ implanter-draw-failed = Вы попытались удалить имплант�
 implanter-draw-text = Извлечь
 implanter-inject-text = Ввести
 implanter-empty-text = Отсутствует
-implanter-implant-text = { $implantName }{ $lineBreak }{ $implantDescription }
+implanter-contained-implant-text = [color=green]{ $desc }[/color]
 implanter-label = [color=white]Имплантат: { $currentEntities }{ $lineBreak }Режим: { $modeString }[/color]
 
 ## Implanter Actions
@@ -24,5 +24,11 @@ open-uplink-implant-action-name = Открыть Аплинк
 open-uplink-implant-action-description = Открывает аплинк синдиката, встроенный в Вашу кожу
 action-name-honk = Хонк!
 action-desc-honk = Активирует ваш хонкающий имплантат, который будет издавать фирменный звук клоуна.
+use-emp-implant-action-name = Активировать ЭМИ
+use-emp-implant-action-description = Вызывает небольшой ЭМИ импульс вокруг вас
+use-dna-scrambler-implant-action-name = Исказить ДНК
+use-dna-scrambler-implant-action-description = ЧЕНДЖЛИНГ В ТЕХАХ!
 deathrattle-implant-dead-message = { $user } умер по координатам: { $position }.
+scramble-attempt-while-scrambled-popup = Обнаружена искажённая ДНК, пожалуйста, извлеките имплантат перед отменой текущего искажения.
+scramble-implant-activated-popup = Вы трансформировались в { $identity }
 deathrattle-implant-critical-message = Жизненные показатели { $user } критические, требуется неотложная помощь по координатам: { $position }.
