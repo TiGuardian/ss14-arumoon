@@ -48,13 +48,6 @@
       factions:
       - Syndicate
 
-- type: entity
-  parent: MobHumanSyndicateAgent
-  id: MobHumanSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
-  suffix: NukeOps
-  components:
-    - type: NukeOperative
-
 # Nuclear Operative
 - type: entity
   noSpawn: true
@@ -88,15 +81,8 @@
       factions:
       - Syndicate
 
-# DNA Scrambler
 - type: entity
-  parent: MobHuman
-  id: MobHumanScrambled
-  name: Scrambled Human
-  components:
-    - type: RandomHumanoidAppearance
-
-- type: entity
+  noSpawn: true
   name: Arriving Assistant
   parent: MobHuman
   id: MobHumanArrivingAss

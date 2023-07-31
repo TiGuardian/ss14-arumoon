@@ -8,12 +8,6 @@
   },
     "states": [
         {
-            "name": "dna"
-        },
-        {
-            "name": "heart_black"
-        },
-        {
             "name": "beaker"
         },
         {

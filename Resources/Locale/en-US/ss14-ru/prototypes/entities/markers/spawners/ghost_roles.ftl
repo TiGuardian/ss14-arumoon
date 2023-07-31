@@ -13,6 +13,3 @@ ent-SpawnPointGhostNukeOperative = ghost role spawn point
 ent-SpawnPointLoneNukeOperative = ghost role spawn point
     .suffix = loneops
     .desc = { ent-MarkerBase.desc }
-ent-SpawnPointGhostDragon = ghost role spawn point
-    .suffix = dragon
-    .desc = { ent-MarkerBase.desc }

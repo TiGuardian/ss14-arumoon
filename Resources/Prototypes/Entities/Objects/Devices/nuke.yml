@@ -61,10 +61,8 @@
   id: NuclearBombUnanchored
   suffix: unanchored
   components:
-  - type: Transform
-    anchored: false
-  - type: Physics
-    bodyType: Dynamic
+    - type: Transform
+      anchored: false
 
 - type: entity
   parent: StorageTank

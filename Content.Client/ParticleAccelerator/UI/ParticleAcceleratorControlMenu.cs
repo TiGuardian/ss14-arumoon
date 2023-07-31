@@ -409,7 +409,7 @@ namespace Content.Client.ParticleAccelerator.UI
             if (_maxStrength > 3 && enabled && assembled)
             {
                 _shouldContinueAnimating = true;
-                if (!_alarmControl.HasRunningAnimation("warningAnim"))
+                if (!_alarmControl.Visible)
                     _alarmControl.PlayAnimation(_alarmControlAnimation, "warningAnim");
             }
             else

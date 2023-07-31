@@ -27,7 +27,6 @@
       path: /Audio/Effects/thunk.ogg
     soundEmpty:
       path: /Audio/Items/hiss.ogg
-    clumsyProof: true
   - type: ContainerAmmoProvider
     container: storagebase
   - type: PneumaticCannon
@@ -86,7 +85,6 @@
       path: /Audio/Effects/thunk.ogg
     soundEmpty:
       path: /Audio/Items/hiss.ogg
-    clumsyProof: true
   - type: ContainerAmmoProvider
     container: storagebase
   - type: Item

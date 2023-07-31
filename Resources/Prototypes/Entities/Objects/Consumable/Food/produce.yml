@@ -238,10 +238,7 @@
   components:
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/banana.rsi
-      layers:
-      - state: peel
-      - state: primed
-        shader: unshaded
+      state: primed
     - type: TriggerOnSlip
     - type: ExplodeOnTrigger
     - type: Explosive
@@ -864,7 +861,7 @@
     grindableSolutionName: food
   - type: Tag
     tags:
-    - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
+    - Flower
 
 - type: entity
   name: lingzhi
@@ -927,9 +924,6 @@
     sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
     slots:
     - HEAD
-  - type: Tag
-    tags:
-    - Ambrosia
 
 - type: entity
   name: galaxythistle

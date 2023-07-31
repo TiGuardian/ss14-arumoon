@@ -1,3 +1,6 @@
+ent-ClothingEyesGlassesBeer = beer goggles
+    .desc = A pair of sunglasses outfitted with apparatus to scan reagents, as well as providing an innate understanding of liquid viscosity while in motion.
+    .suffix = { "" }
 ent-ClothingEyesGlassesGar = gar glasses
     .desc = Go beyond impossible and kick reason to the curb!
     .suffix = { "" }

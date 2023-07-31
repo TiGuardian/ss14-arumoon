@@ -123,10 +123,12 @@ namespace Content.Client.Administration.UI.Bwoink
                     _console.ExecuteCommand($"adminnotes \"{_currentPlayer.SessionId}\"");
             };
 
+            // ew
             Ban.OnPressed += _ =>
             {
-                if (_currentPlayer is not null)
-                    _console.ExecuteCommand($"banpanel \"{_currentPlayer.SessionId}\"");
+                var bw = new BanWindow();
+                bw.OnPlayerSelectionChanged(_currentPlayer);
+                bw.Open();
             };
 
             Kick.OnPressed += _ =>

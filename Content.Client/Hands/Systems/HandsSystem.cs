@@ -110,16 +110,16 @@ namespace Content.Client.Hands.Systems
         #region PickupAnimation
         private void HandlePickupAnimation(PickupAnimationEvent msg)
         {
-            PickupAnimation(msg.ItemUid, msg.InitialPosition, msg.FinalPosition, msg.InitialAngle);
+            PickupAnimation(msg.ItemUid, msg.InitialPosition, msg.FinalPosition);
         }
 
-        public override void PickupAnimation(EntityUid item, EntityCoordinates initialPosition, Vector2 finalPosition, Angle initialAngle,
+        public override void PickupAnimation(EntityUid item, EntityCoordinates initialPosition, Vector2 finalPosition,
             EntityUid? exclude)
         {
-            PickupAnimation(item, initialPosition, finalPosition, initialAngle);
+            PickupAnimation(item, initialPosition, finalPosition);
         }
 
-        public void PickupAnimation(EntityUid item, EntityCoordinates initialPosition, Vector2 finalPosition, Angle initialAngle)
+        public void PickupAnimation(EntityUid item, EntityCoordinates initialPosition, Vector2 finalPosition)
         {
             if (!_gameTiming.IsFirstTimePredicted)
                 return;
@@ -127,7 +127,7 @@ namespace Content.Client.Hands.Systems
             if (finalPosition.EqualsApprox(initialPosition.Position, tolerance: 0.1f))
                 return;
 
-            ReusableAnimations.AnimateEntityPickup(item, initialPosition, finalPosition, initialAngle);
+            ReusableAnimations.AnimateEntityPickup(item, initialPosition, finalPosition);
         }
         #endregion
 

@@ -15,7 +15,7 @@
       time: 72000
   weight: 10
   startingGear: QuartermasterGear
-  icon: "JobIconQuarterMaster"
+  icon: "QuarterMaster"
   supervisors: job-supervisors-captain
   access:
   - Cargo
