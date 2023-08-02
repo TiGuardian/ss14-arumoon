@@ -46,20 +46,13 @@
     damageOverlayGroups:
       Brute:
         sprite: Mobs/Effects/brute_damage.rsi
-        color: "#fff01f"
+        color: "#ffd800"
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
         color: "#999999"
-  - type: MeleeWeapon
-    hidden: true
-    soundHit:
-        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
-    angle: 30
-    animation: WeaponArcClaw
-    attackRate: 1
-    damage:
-      types:
-        Slash: 5
+  - type: CombatMode
+    canDisarm: true
+    disarmFailChance: 0.6
   - type: Bloodstream
     maxBleedAmount: 7.5 #hemolymph is more viscous, therefore the limit is less
     bloodlossDamage:

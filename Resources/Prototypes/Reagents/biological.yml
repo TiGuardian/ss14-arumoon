@@ -43,7 +43,7 @@
   group: Biological
   desc: reagent-desc-hemolymph
   flavor: terrible
-  color: "#fff01f"
+  color: "#ffd800"
   recognizable: true
   physicalDesc: reagent-physical-desc-viscous
   slippery: false
